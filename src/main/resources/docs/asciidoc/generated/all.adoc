@@ -1,0 +1,1300 @@
+= TR APIS
+
+
+[[_overview]]
+== 概览
+Token Requestor APIS
+
+
+=== 版本信息
+[%hardbreaks]
+__版本__ : 1.0
+
+
+=== 许可信息
+[%hardbreaks]
+__服务条款__ : http://www.cjdfintech.com
+
+
+=== URI scheme
+[%hardbreaks]
+__域名__ : localhost:8080
+__基础路径__ : /
+
+
+=== 标签
+
+* mastercard-controller : Mastercard Controller
+* mastercard-notify-controller : Mastercard Notify Controller
+* mastercard-tokenization-controller : Mastercard Tokenization Controller
+* notify-controller : Notify Controller
+* visa-back-controller : Visa Back Controller
+* visa-提供给前端的接口 : visa 提供给前端的接口
+
+
+
+
+[[_paths]]
+== 资源
+
+[[_mastercard-controller_resource]]
+=== Mastercard-controller
+Mastercard Controller
+
+
+[[_activeusingpost]]
+==== active
+....
+POST /master/active
+....
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Body**|**activeRequest** +
+__必填__|activeRequest|<<_activerequest,ActiveRequest>>
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_activeresponse,ActiveResponse>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/master/active
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"<<_activeresponse>>"
+----
+
+
+[[_checkeligibilityusingpost]]
+==== checkEligibility
+....
+POST /master/checkEligibility
+....
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Body**|**checkEligibilityRequest** +
+__必填__|checkEligibilityRequest|<<_checkeligibilityrequest,CheckEligibilityRequest>>
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_checkeligibilityresponse,CheckEligibilityResponse>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/master/checkEligibility
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"<<_checkeligibilityresponse>>"
+----
+
+
+[[_digitizeusingpost]]
+==== digitize
+....
+POST /master/digitize
+....
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Body**|**digitizeRequest** +
+__必填__|digitizeRequest|<<_digitizerequest,DigitizeRequest>>
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_digitizeresponse,DigitizeResponse>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/master/digitize
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"<<_digitizeresponse>>"
+----
+
+
+[[_registerdeviceusingpost]]
+==== registerDevice
+....
+POST /master/register
+....
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Body**|**registerDeviceRequest** +
+__必填__|registerDeviceRequest|<<_registerdevicerequest,RegisterDeviceRequest>>
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_registerdeviceresponse,RegisterDeviceResponse>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/master/register
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"<<_registerdeviceresponse>>"
+----
+
+
+[[_requestactivationcodeusingpost]]
+==== requestActivationCode
+....
+POST /master/requestActivationCode
+....
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Body**|**requestActivicationRequest** +
+__必填__|requestActivicationRequest|<<_requestactivicationrequest,RequestActivicationRequest>>
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_requestactivicationresponse,RequestActivicationResponse>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/master/requestActivationCode
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"<<_requestactivicationresponse>>"
+----
+
+
+[[_mastercard-notify-controller_resource]]
+=== Mastercard-notify-controller
+Mastercard Notify Controller
+
+
+[[_notifyusingpost]]
+==== notify
+....
+POST /master/notify
+....
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Body**|**notifyReq** +
+__必填__|notifyReq|<<_notifyreq,NotifyReq>>
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_notifyresp,NotifyResp>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/master/notify
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"<<_notifyresp>>"
+----
+
+
+[[_mastercard-tokenization-controller_resource]]
+=== Mastercard-tokenization-controller
+Mastercard Tokenization Controller
+
+
+[[_notifyusingpost_1]]
+==== notify
+....
+POST /master/token/register
+....
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Body**|**notifyReq** +
+__必填__|notifyReq|<<_notifyreq,NotifyReq>>
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_notifyresp,NotifyResp>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/master/token/register
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"<<_notifyresp>>"
+----
+
+
+[[_notify-controller_resource]]
+=== Notify-controller
+Notify Controller
+
+
+[[_notifyusingpost_2]]
+==== notify
+....
+POST /app/home
+....
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Body**|**notifyModel** +
+__必填__|notifyModel|<<_notifyreq,NotifyReq>>
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_notifyresp,NotifyResp>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/app/home
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"<<_notifyresp>>"
+----
+
+
+[[_visa-back-controller_resource]]
+=== Visa-back-controller
+Visa Back Controller
+
+
+[[_provisionedtokenusingpost]]
+==== ProvisionedToken
+....
+POST /visa/back/provisionedToken
+....
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Body**|**apiKey** +
+__可选__|apiKey|string
+|**Body**|**eventType** +
+__可选__|eventType|string
+|**Body**|**req** +
+__必填__|req|<<_callbackprovisionedtokenreq,CallBackProvisionedTokenReq>>
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|string
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/visa/back/provisionedToken
+----
+
+
+====== 请求 body
+[source,json]
+----
+{
+  "api" : "string",
+  "date" : "string",
+  "vnotificationID" : "string",
+  "vprovisionedTokenID" : "string"
+}
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"string"
+----
+
+
+[[_801b9e7d755a3ee70eb14c3fdcfb66a9]]
+=== Visa-提供给前端的接口
+visa 提供给前端的接口
+
+
+[[_deletetokenfromclientusingpost]]
+==== deleteToken接口
+....
+POST /visa/f/deleteToken
+....
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Body**|**deleteTokenReqVo** +
+__必填__|传入json格式|<<_deletetokenreqvo,DeleteTokenReqVo>>
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|无内容
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/visa/f/deleteToken
+----
+
+
+====== 请求 body
+[source,json]
+----
+{
+  "updateReason" : {
+    "reasonCode" : "string",
+    "reasonDesc" : "string"
+  },
+  "vprovisionedTokenID" : "string"
+}
+----
+
+
+[[_enrolldeviceusingpost]]
+==== enrollDevice接口
+....
+POST /visa/f/enrollDevice
+....
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Body**|**enrollDeviceReqVo** +
+__必填__|传入json格式|<<_enrolldevicereqvo,EnrollDeviceReqVo>>
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_4f85e311243893e18cb83706eed0eb7c,统一返参实体«EnrollPanResVo»>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/visa/f/enrollDevice
+----
+
+
+====== 请求 body
+[source,json]
+----
+{
+  "channelSecurityContext" : {
+    "channelInfo" : {
+      "encryptionScheme" : 0
+    },
+    "deviceCerts" : {
+      "certFormat" : "string",
+      "certUsage" : 0,
+      "certValue" : "string"
+    },
+    "keyData" : "string",
+    "vtsCerts" : {
+      "certUsage" : 0,
+      "vcertificateID" : "string"
+    }
+  },
+  "clientAppID" : "string",
+  "clientDeviceID" : "string",
+  "clientWalletAccountID" : "string",
+  "consumerEntryMode" : "string",
+  "deviceBrand" : "string",
+  "deviceIDType" : "string",
+  "deviceManufacturer" : "string",
+  "deviceModel" : "string",
+  "deviceName" : "string",
+  "deviceProfile" : "string",
+  "deviceType" : "string",
+  "encPaymentInstrument" : "string",
+  "encryptionMetaData" : "string",
+  "hostDeviceID" : "string",
+  "intent" : "string",
+  "locale" : "string",
+  "osBuildID" : "string",
+  "osType" : "string",
+  "osVersion" : "string",
+  "panSource" : "string",
+  "passcode" : {
+    "maxRetries" : 0,
+    "passCodeConverationID" : "string",
+    "type" : "string",
+    "value" : "string"
+  },
+  "phoneNumber" : "string",
+  "platformType" : "string"
+}
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+{
+  "code" : "string",
+  "data" : {
+    "cardMetaData" : {
+      "backgroundColor" : "string",
+      "bankAppAddress" : "string",
+      "bankAppName" : "string",
+      "cardData" : {
+        "content" : {
+          "encodedData" : "string",
+          "height" : 0,
+          "mimeType" : "string",
+          "width" : 0
+        },
+        "contentType" : "string",
+        "guid" : "string"
+      },
+      "contactEmail" : "string",
+      "contactName" : "string",
+      "contactNumber" : "string",
+      "contactWebsite" : "string",
+      "foregroundColor" : "string",
+      "labelColor" : "string",
+      "longDescription" : "string",
+      "privacyPolicyURL" : "string",
+      "shortDescription" : "string",
+      "termsAndConditionsID" : "string",
+      "termsAndConditionsURL" : "string",
+      "unsupportedCardVerificationTypes" : "string",
+      "unsupportedPresentationTypes" : "string"
+    },
+    "errorResponse" : {
+      "details" : [ {
+        "location" : "string",
+        "message" : "string"
+      } ],
+      "message" : "string",
+      "reason" : "string"
+    },
+    "getContentRes" : {
+      "altText" : "string",
+      "content" : {
+        "encodedData" : "string",
+        "height" : 0,
+        "mimeType" : "string",
+        "width" : 0
+      },
+      "contentType" : "string",
+      "errorResponse" : {
+        "details" : [ {
+          "location" : "string",
+          "message" : "string"
+        } ],
+        "message" : "string",
+        "reason" : "string"
+      },
+      "httpStatus" : "string"
+    },
+    "httpStatus" : "string",
+    "vpanEnrollmentID" : "string"
+  },
+  "desc" : "string",
+  "success" : true
+}
+----
+
+
+[[_provisiontokenusingpost]]
+==== provisionToken接口
+....
+POST /visa/f/provisionToken
+....
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Body**|**provisionTokenReqVo** +
+__必填__|传入json格式|<<_provisiontokenreqvo,ProvisionTokenReqVo>>
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_a8dbf294a42c2b69da467fa1d4cc7dbd,统一返参实体«ProvisionTokenResVo»>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/visa/f/provisionToken
+----
+
+
+====== 请求 body
+[source,json]
+----
+{
+  "vpanEnrollmentID" : "string"
+}
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+{
+  "code" : "string",
+  "data" : "<<_provisiontokenresvo>>",
+  "desc" : "string",
+  "success" : true
+}
+----
+
+
+
+
+[[_definitions]]
+== 定义
+
+[[_callbackprovisionedtokenreq]]
+=== CallBackProvisionedTokenReq
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**api** +
+__可选__|**样例** : `"string"`|string
+|**date** +
+__可选__|**样例** : `"string"`|string
+|**vnotificationID** +
+__可选__|**样例** : `"string"`|string
+|**vprovisionedTokenID** +
+__可选__|**样例** : `"string"`|string
+|===
+
+
+[[_carddata]]
+=== CardData
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**content** +
+__可选__|**样例** : `"<<_content>>"`|<<_content,Content>>
+|**contentType** +
+__可选__|**样例** : `"string"`|string
+|**guid** +
+__可选__|**样例** : `"string"`|string
+|===
+
+
+[[_cardmetadata]]
+=== CardMetadata
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**backgroundColor** +
+__可选__|**样例** : `"string"`|string
+|**bankAppAddress** +
+__可选__|**样例** : `"string"`|string
+|**bankAppName** +
+__可选__|**样例** : `"string"`|string
+|**cardData** +
+__可选__|**样例** : `"<<_carddata>>"`|<<_carddata,CardData>>
+|**contactEmail** +
+__可选__|**样例** : `"string"`|string
+|**contactName** +
+__可选__|**样例** : `"string"`|string
+|**contactNumber** +
+__可选__|**样例** : `"string"`|string
+|**contactWebsite** +
+__可选__|**样例** : `"string"`|string
+|**foregroundColor** +
+__可选__|**样例** : `"string"`|string
+|**labelColor** +
+__可选__|**样例** : `"string"`|string
+|**longDescription** +
+__可选__|**样例** : `"string"`|string
+|**privacyPolicyURL** +
+__可选__|**样例** : `"string"`|string
+|**shortDescription** +
+__可选__|**样例** : `"string"`|string
+|**termsAndConditionsID** +
+__可选__|**样例** : `"string"`|string
+|**termsAndConditionsURL** +
+__可选__|**样例** : `"string"`|string
+|**unsupportedCardVerificationTypes** +
+__可选__|**样例** : `"string"`|string
+|**unsupportedPresentationTypes** +
+__可选__|**样例** : `"string"`|string
+|===
+
+
+[[_channelinfo]]
+=== ChannelInfo
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**encryptionScheme** +
+__可选__|**样例** : `0`|integer (int32)
+|===
+
+
+[[_channelsecuritycontext]]
+=== ChannelSecurityContext
+enrollDevice VTS请求入参实体 For NFC-SE use cases
+
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**channelInfo** +
+__可选__|**样例** : `"<<_channelinfo>>"`|<<_channelinfo,ChannelInfo>>
+|**deviceCerts** +
+__可选__|**样例** : `"<<_devicecerts>>"`|<<_devicecerts,DeviceCerts>>
+|**keyData** +
+__可选__|**样例** : `"string"`|string
+|**vtsCerts** +
+__可选__|**样例** : `"<<_vtscerts>>"`|<<_vtscerts,VtsCerts>>
+|===
+
+
+[[_content]]
+=== Content
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**encodedData** +
+__可选__|**样例** : `"string"`|string
+|**height** +
+__可选__|**样例** : `0`|integer (int32)
+|**mimeType** +
+__可选__|**样例** : `"string"`|string
+|**width** +
+__可选__|**样例** : `0`|integer (int32)
+|===
+
+
+[[_deletetokenreqvo]]
+=== DeleteTokenReqVo
+DeleteToken 前端请求入参实体
+
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**updateReason** +
+__必填__|include reasonCode（following values: 1.FRAUD 2.CUSTOMER_CONFIRMED） and reasonDesc(Alphabetic, numeric; maximum 256 characters) +
+**样例** : `"<<_updatereason>>"`|<<_updatereason,UpdateReason>>
+|**vprovisionedTokenID** +
+__可选__|**样例** : `"string"`|string
+|===
+
+
+[[_details]]
+=== Details
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**location** +
+__可选__|**样例** : `"string"`|string
+|**message** +
+__可选__|**样例** : `"string"`|string
+|===
+
+
+[[_devicecerts]]
+=== DeviceCerts
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**certFormat** +
+__可选__|**样例** : `"string"`|string
+|**certUsage** +
+__可选__|**样例** : `0`|integer (int32)
+|**certValue** +
+__可选__|**样例** : `"string"`|string
+|===
+
+
+[[_enrolldevicereqvo]]
+=== EnrollDeviceReqVo
+EnrollDevice 前端请求入参实体
+
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**channelSecurityContext** +
+__可选__|**样例** : `"<<_channelsecuritycontext>>"`|<<_channelsecuritycontext,ChannelSecurityContext>>
+|**clientAppID** +
+__必填__|GUID specific for a particular application,maximum 36 characters +
+**样例** : `"string"`|string
+|**clientDeviceID** +
+__必填__|clientDeviceID +
+**样例** : `"string"`|string
+|**clientWalletAccountID** +
+__必填__|Client provided consumer ID,maximum 24 characters +
+**样例** : `"string"`|string
+|**consumerEntryMode** +
+__可选__|**样例** : `"string"`|string
+|**deviceBrand** +
+__可选__|deviceBrand maximum 32 characters Example: “Galaxy”, “Nexus”. +
+**样例** : `"string"`|string
+|**deviceIDType** +
+__可选__|osBuildID maximum 32 characters Example: KTU84M. +
+**样例** : `"string"`|string
+|**deviceManufacturer** +
+__可选__|deviceManufacturer maximum 32 characters Example: “Samsung”, “HTC”. +
+**样例** : `"string"`|string
+|**deviceModel** +
+__可选__|deviceModel maximum 32 characters Alphabetic, numeric, hyphens ( - ), underscores ( _ ) +
+**样例** : `"string"`|string
+|**deviceName** +
+__必填__|Example: “My Word”, “Work Phone” +
+**样例** : `"string"`|string
+|**deviceProfile** +
+__可选__|deviceProfile The default value for this field is CDCVM_SUPPORTED. +
+**样例** : `"string"`|string
+|**deviceType** +
+__必填__|Device type +
+**样例** : `"string"`|string
+|**encPaymentInstrument** +
+__必填__|JSON Web Encrypted string using the shared secret made available at the time of onboarding +
+**样例** : `"string"`|string
+|**encryptionMetaData** +
+__可选__|**样例** : `"string"`|string
+|**hostDeviceID** +
+__可选__|hostDeviceID maximum 24 characters +
+**样例** : `"string"`|string
+|**intent** +
+__可选__|**样例** : `"string"`|string
+|**locale** +
+__必填__|Alphabetic, hyphens ( – ), and underscores( _ )，maximum 5 characters +
+**样例** : `"string"`|string
+|**osBuildID** +
+__可选__|osBuildID maximum 32 characters Example: KTU84M. +
+**样例** : `"string"`|string
+|**osType** +
+__必填__|Operating system type +
+**样例** : `"string"`|string
+|**osVersion** +
+__可选__|osVersion maximum 32 characters Example: 4.4.4 +
+**样例** : `"string"`|string
+|**panSource** +
+__必填__|Language in which the applicationcommunicates with the consumer，maximum 5 characters +
+**样例** : `"string"`|string
+|**passcode** +
+__可选__|**样例** : `"<<_passcode>>"`|<<_passcode,PassCode>>
+|**phoneNumber** +
+__可选__|phoneNumber Numeric; maximum 32 digits +
+**样例** : `"string"`|string
+|**platformType** +
+__可选__|**样例** : `"string"`|string
+|===
+
+
+[[_enrollpanresvo]]
+=== EnrollPanResVo
+EnrollPan 前端请求反参实体
+
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**cardMetaData** +
+__可选__|**样例** : `"<<_cardmetadata>>"`|<<_cardmetadata,CardMetadata>>
+|**errorResponse** +
+__可选__|**样例** : `"<<_standarderrorres>>"`|<<_standarderrorres,StandardErrorRes>>
+|**getContentRes** +
+__可选__|**样例** : `"<<_getcontentres>>"`|<<_getcontentres,GetContentRes>>
+|**httpStatus** +
+__可选__|**样例** : `"string"`|enum (100 CONTINUE, 101 SWITCHING_PROTOCOLS, 102 PROCESSING, 103 CHECKPOINT, 200 OK, 201 CREATED, 202 ACCEPTED, 203 NON_AUTHORITATIVE_INFORMATION, 204 NO_CONTENT, 205 RESET_CONTENT, 206 PARTIAL_CONTENT, 207 MULTI_STATUS, 208 ALREADY_REPORTED, 226 IM_USED, 300 MULTIPLE_CHOICES, 301 MOVED_PERMANENTLY, 302 FOUND, 302 MOVED_TEMPORARILY, 303 SEE_OTHER, 304 NOT_MODIFIED, 305 USE_PROXY, 307 TEMPORARY_REDIRECT, 308 PERMANENT_REDIRECT, 400 BAD_REQUEST, 401 UNAUTHORIZED, 402 PAYMENT_REQUIRED, 403 FORBIDDEN, 404 NOT_FOUND, 405 METHOD_NOT_ALLOWED, 406 NOT_ACCEPTABLE, 407 PROXY_AUTHENTICATION_REQUIRED, 408 REQUEST_TIMEOUT, 409 CONFLICT, 410 GONE, 411 LENGTH_REQUIRED, 412 PRECONDITION_FAILED, 413 PAYLOAD_TOO_LARGE, 413 REQUEST_ENTITY_TOO_LARGE, 414 URI_TOO_LONG, 414 REQUEST_URI_TOO_LONG, 415 UNSUPPORTED_MEDIA_TYPE, 416 REQUESTED_RANGE_NOT_SATISFIABLE, 417 EXPECTATION_FAILED, 418 I_AM_A_TEAPOT, 419 INSUFFICIENT_SPACE_ON_RESOURCE, 420 METHOD_FAILURE, 421 DESTINATION_LOCKED, 422 UNPROCESSABLE_ENTITY, 423 LOCKED, 424 FAILED_DEPENDENCY, 426 UPGRADE_REQUIRED, 428 PRECONDITION_REQUIRED, 429 TOO_MANY_REQUESTS, 431 REQUEST_HEADER_FIELDS_TOO_LARGE, 451 UNAVAILABLE_FOR_LEGAL_REASONS, 500 INTERNAL_SERVER_ERROR, 501 NOT_IMPLEMENTED, 502 BAD_GATEWAY, 503 SERVICE_UNAVAILABLE, 504 GATEWAY_TIMEOUT, 505 HTTP_VERSION_NOT_SUPPORTED, 506 VARIANT_ALSO_NEGOTIATES, 507 INSUFFICIENT_STORAGE, 508 LOOP_DETECTED, 509 BANDWIDTH_LIMIT_EXCEEDED, 510 NOT_EXTENDED, 511 NETWORK_AUTHENTICATION_REQUIRED)
+|**vpanEnrollmentID** +
+__可选__|**样例** : `"string"`|string
+|===
+
+
+[[_getcontentres]]
+=== GetContentRes
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**altText** +
+__可选__|**样例** : `"string"`|string
+|**content** +
+__可选__|**样例** : `"<<_content>>"`|<<_content,Content>>
+|**contentType** +
+__可选__|**样例** : `"string"`|string
+|**errorResponse** +
+__可选__|**样例** : `"<<_standarderrorres>>"`|<<_standarderrorres,StandardErrorRes>>
+|**httpStatus** +
+__可选__|**样例** : `"string"`|enum (100 CONTINUE, 101 SWITCHING_PROTOCOLS, 102 PROCESSING, 103 CHECKPOINT, 200 OK, 201 CREATED, 202 ACCEPTED, 203 NON_AUTHORITATIVE_INFORMATION, 204 NO_CONTENT, 205 RESET_CONTENT, 206 PARTIAL_CONTENT, 207 MULTI_STATUS, 208 ALREADY_REPORTED, 226 IM_USED, 300 MULTIPLE_CHOICES, 301 MOVED_PERMANENTLY, 302 FOUND, 302 MOVED_TEMPORARILY, 303 SEE_OTHER, 304 NOT_MODIFIED, 305 USE_PROXY, 307 TEMPORARY_REDIRECT, 308 PERMANENT_REDIRECT, 400 BAD_REQUEST, 401 UNAUTHORIZED, 402 PAYMENT_REQUIRED, 403 FORBIDDEN, 404 NOT_FOUND, 405 METHOD_NOT_ALLOWED, 406 NOT_ACCEPTABLE, 407 PROXY_AUTHENTICATION_REQUIRED, 408 REQUEST_TIMEOUT, 409 CONFLICT, 410 GONE, 411 LENGTH_REQUIRED, 412 PRECONDITION_FAILED, 413 PAYLOAD_TOO_LARGE, 413 REQUEST_ENTITY_TOO_LARGE, 414 URI_TOO_LONG, 414 REQUEST_URI_TOO_LONG, 415 UNSUPPORTED_MEDIA_TYPE, 416 REQUESTED_RANGE_NOT_SATISFIABLE, 417 EXPECTATION_FAILED, 418 I_AM_A_TEAPOT, 419 INSUFFICIENT_SPACE_ON_RESOURCE, 420 METHOD_FAILURE, 421 DESTINATION_LOCKED, 422 UNPROCESSABLE_ENTITY, 423 LOCKED, 424 FAILED_DEPENDENCY, 426 UPGRADE_REQUIRED, 428 PRECONDITION_REQUIRED, 429 TOO_MANY_REQUESTS, 431 REQUEST_HEADER_FIELDS_TOO_LARGE, 451 UNAVAILABLE_FOR_LEGAL_REASONS, 500 INTERNAL_SERVER_ERROR, 501 NOT_IMPLEMENTED, 502 BAD_GATEWAY, 503 SERVICE_UNAVAILABLE, 504 GATEWAY_TIMEOUT, 505 HTTP_VERSION_NOT_SUPPORTED, 506 VARIANT_ALSO_NEGOTIATES, 507 INSUFFICIENT_STORAGE, 508 LOOP_DETECTED, 509 BANDWIDTH_LIMIT_EXCEEDED, 510 NOT_EXTENDED, 511 NETWORK_AUTHENTICATION_REQUIRED)
+|===
+
+
+[[_passcode]]
+=== PassCode
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**maxRetries** +
+__可选__|**样例** : `0`|integer (int32)
+|**passCodeConverationID** +
+__可选__|**样例** : `"string"`|string
+|**type** +
+__可选__|**样例** : `"string"`|string
+|**value** +
+__可选__|**样例** : `"string"`|string
+|===
+
+
+[[_provisiontokenreqvo]]
+=== ProvisionTokenReqVo
+provisonToken 前端请求入参实体
+
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**vpanEnrollmentID** +
+__可选__|**样例** : `"string"`|string
+|===
+
+
+[[_standarderrorres]]
+=== StandardErrorRes
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**details** +
+__可选__|**样例** : `[ "<<_details>>" ]`|< <<_details,Details>> > array
+|**message** +
+__可选__|**样例** : `"string"`|string
+|**reason** +
+__可选__|**样例** : `"string"`|string
+|===
+
+
+[[_updatereason]]
+=== UpdateReason
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**reasonCode** +
+__必填__|reasonCode（following values: 1.FRAUD 2.CUSTOMER_CONFIRMED） +
+**样例** : `"string"`|string
+|**reasonDesc** +
+__可选__|**样例** : `"string"`|string
+|===
+
+
+[[_vtscerts]]
+=== VtsCerts
+Visa Token Service Certs
+
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**certUsage** +
+__可选__|**样例** : `0`|integer (int32)
+|**vcertificateID** +
+__可选__|**样例** : `"string"`|string
+|===
+
+
+[[_4f85e311243893e18cb83706eed0eb7c]]
+=== 统一返参实体«EnrollPanResVo»
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**code** +
+__可选__|**样例** : `"string"`|string
+|**data** +
+__可选__|**样例** : `"<<_enrollpanresvo>>"`|<<_enrollpanresvo,EnrollPanResVo>>
+|**desc** +
+__可选__|**样例** : `"string"`|string
+|**success** +
+__可选__|**样例** : `true`|boolean
+|===
+
+
+[[_a8dbf294a42c2b69da467fa1d4cc7dbd]]
+=== 统一返参实体«ProvisionTokenResVo»
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**code** +
+__可选__|**样例** : `"string"`|string
+|**data** +
+__可选__|**样例** : `"<<_provisiontokenresvo>>"`|<<_provisiontokenresvo,ProvisionTokenResVo>>
+|**desc** +
+__可选__|**样例** : `"string"`|string
+|**success** +
+__可选__|**样例** : `true`|boolean
+|===
+
+
+
+
+

@@ -1,0 +1,24 @@
+server:
+  port: 8900
+
+logging:
+  config: classpath:logback.xml
+
+spring:
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://172.25.4.216:3306/th_token_requester
+    username: m_th_token_rwo75
+    password: TnVFzI
+    #url: jdbc:mysql://127.0.0.1:3306/th_token_requester
+#    url: jdbc:mysql://127.0.0.1:3306/th_token_requester?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+#    username: root
+#    password: root
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      pool-name: DatebookHikariCP
+
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*Mapper.xml

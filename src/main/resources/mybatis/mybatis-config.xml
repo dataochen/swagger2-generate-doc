@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <!-- 这个配置使全局的映射器启用或禁用缓存。默认true -->
+        <setting name="cacheEnabled" value="true"/>
+        <!-- 全局启用或禁用延迟加载。默认true，为true的会使用cglib作代理-->
+        <setting name="lazyLoadingEnabled" value="false"/>
+        <!-- 允许或不允许多种结果集从一个单独的语句中返回。默认true -->
+        <setting name="multipleResultSetsEnabled" value="true"/>
+        <!-- 使用列标签代替列名。默认true -->
+        <setting name="useColumnLabel" value="true"/>
+        <!-- 允许JDBC支持生成的键。需要适合的驱动。默认false -->
+        <setting name="useGeneratedKeys" value="false"/>
+        <!-- 。REUSE执行器重用预处理语句。BATCH执行器重用语句和批量更新 。默认SIMPLE-->
+        <setting name="defaultExecutorType" value="SIMPLE"/>
+        <!-- 设置超时时间，它决定驱动等待一个数据库响应的时间。单位是秒-->
+        <setting name="defaultStatementTimeout" value="25"/>
+        <!--这样配置之后，就不需要人工写上面的resultMap了，直接resultType就可以了，对于字段超多的情况，这可以省去不少没意义的时间花费。-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!-- 打印查询语句 -->
+        <!--<setting name="logImpl" value="STDOUT_LOGGING" />-->
+    </settings>
+     <!--plugins在配置文件中的位置必须符合要求，否则会报错，顺序如下: properties?, settings?, typeAliases?, typeHandlers?, objectFactory?,objectWrapperFactory?, plugins?, environments?, databaseIdProvider?, mappers? -->
+
+</configuration>
